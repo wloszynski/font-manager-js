@@ -97,8 +97,6 @@ export default class FontManager {
 				(this.options.categories.length === 0 || this.options.categories.includes(font.category)) &&
 				// `scripts` parameter: Only keep fonts which are available in all specified scripts
 				this.options.scripts.every((script): boolean => font.scripts.includes(script)) &&
-				// `variants` parameter: Only keep fonts which contain all specified variants
-				this.options.variants.every((variant): boolean => font.variants.includes(variant)) &&
 				// `filter` parameter: Only keep fonts for which the `filter` function evaluates to `true`
 				this.options.filter(font) === true
 			) {
